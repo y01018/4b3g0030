@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>行動電話使用意見調查表</title>
+  <style>
+    /* 簡單排版與外框樣式 */
+    .form-container {
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid #333;
+      padding: 1em;
+    }
+    .form-group {
+      margin-bottom: 1em;
+    }
+    label {
+      display: inline-block;
+      width: 80px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 300px;
+      padding: 0.3em;
+    }
+    textarea {
+      height: 80px;
+    }
+    select {
+      width: 150px;
+      height: 80px; /* 多選下拉清單可顯示較多選項 */
+    }
+    .button-group {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>行動電話使用意見調查表</h2>
+
+  <form action="#" method="post">
+    <!-- 姓名 -->
+    <div class="form-group">
+      <label for="username">姓&nbsp;名：</label>
+      <input type="text" id="username" name="username" placeholder="請輸入姓名">
+    </div>
+
+    <!-- E-Mail -->
+    <div class="form-group">
+      <label for="email">E-Mail：</label>
+      <input type="email" id="email" name="email" placeholder="username@mailserver">
+    </div>
+
+    <!-- 使用手機時最常碰到哪些問題 -->
+    <div class="form-group">
+      <label for="problem">常見問題：</label><br>
+      <textarea id="problem" name="problem" placeholder="手機電池待機時間不夠久..."></textarea>
+    </div>
+
+    <!-- 您使用過哪家業者的門號 (可複選) -->
+    <div class="form-group">
+      <label for="telco">業者：</label><br>
+      <select id="telco" name="telco" multiple>
+        <option value="cht">中華電信</option>
+        <option value="taiwanmobile">台灣大哥大</option>
+        <option value="fareastone">遠傳</option>
+        <option value="taiwanstar">台灣之星</option>
+      </select>
+    </div>
+
+    <!-- 提交與重設按鈕 -->
+    <div class="button-group">
+      <input type="submit" value="提交">
+      <input type="reset" value="重設">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
